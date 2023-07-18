@@ -1,0 +1,8 @@
+.background-image {
+    background-image: url(C:\Ostend\VS_Code\PiMon\client\src\assets\landing.jpg);
+    background-size: cover;
+    background-position: top;
+    min-height: 100%;
+    height: 100vh;
+    position: relative;
+}
