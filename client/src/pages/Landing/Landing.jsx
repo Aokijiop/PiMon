@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { 
     FormControl,
@@ -39,6 +39,10 @@ const Landing = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const navigate = useNavigate();
     const [emailErr, setEmailErr] = useState(false);
+
+    useEffect(() => {
+      Backend.delete('/api/v1/logout');
+    }, []);
 
     const validateEmail = (event) => {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
