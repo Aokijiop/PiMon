@@ -12,10 +12,14 @@ import {
 
 import SavedChars from './pages/SavedChars/SavedChars';
 import Landing from './pages/Landing/Landing';
+import Build from './pages/Build/Build';
 import Testing from './pages/Testing/Testing';
 import NotFound from './pages/NotFound/NotFound';
 
 import Menu from './components/Menu/Menu';
+
+// import Fonts from './fonts/Fonts'
+import theme from './theme/theme';
 
 import ProtectedRoute from './utils/ProtectedRoute';
 
@@ -31,7 +35,7 @@ const App = () => {
   );
 
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Router>
         <Routes>
           <Route path="*" element={<NotFound />} />
@@ -39,6 +43,7 @@ const App = () => {
           <Route path="/login" element={<Landing />} />
           <Route element={<MenuWrapper />}>
             <Route path="/characters" element={<ProtectedRoute Component={SavedChars} redirectRoute='/login' />} />
+            <Route path="/build" element={<ProtectedRoute Component={Build} redirectRoute='/login' />} />
             <Route path="/testing" element={<Testing />} />
           </Route>
         </Routes>

@@ -65,6 +65,9 @@ const Landing = () => {
         else if (errCode == 'auth/invalid-email') {
           desc = 'The email is invalid.';
         }
+        else if (errCode == 'auth/user-not-found') {
+          desc = 'No associated account found.';
+        }
 
         toast({
           title: 'Failed to login.',

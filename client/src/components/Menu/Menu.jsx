@@ -44,7 +44,7 @@ const Menu = () => {
           />
           <Drawer placement='left' onClose={onClose} isOpen={isOpen}>
           <DrawerOverlay />
-          <DrawerContent bgImage={pimonMenu} bgRepeat="no-repeat" bgSize="cover">
+          <DrawerContent bgImage={pimonMenu} bgRepeat="no-repeat" bgSize="cover" borderRadius={5}>
               <DrawerHeader borderBottomWidth='1px' textAlign="center">Pimon Menu</DrawerHeader>
               <DrawerCloseButton />
               <DrawerBody display="flex" mb="300px" flexDirection="column" justifyContent="space-between">

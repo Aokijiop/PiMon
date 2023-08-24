@@ -21,7 +21,7 @@ import AddChar from '../../components/AddCharForm/AddChar';
 
 import spiral from '../../assets/spiral.png';
 
-import { Backend } from '../../utils/utils';
+import { Backend, GenshinDevAPI } from '../../utils/utils';
 
 const SavedChars = () => {
   const [UID, setUID] = useState('');
@@ -52,7 +52,7 @@ const SavedChars = () => {
           </Flex>
           <SimpleGrid columns={characterArr.length >= 3 ? 3 : characterArr.length} rowGap={20} spacing={4} justifyItems="center">
             {characterArr.map((character) => (
-              <CharCard id={character.id} name={character.name} level={character.level} weapon={character.weapon} uid={UID} updateCharData={updateCharData} />
+              <CharCard key={character} id={character.id} name={character.name} level={character.level} weapon={character.weapon} uid={UID} updateCharData={updateCharData} />
             ))};
           </SimpleGrid>
         </Flex>

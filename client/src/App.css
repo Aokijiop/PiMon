@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: 'Genshin';   /*Can be any text*/
+  src: local('genshin'),
+    url("./fonts/genshin.ttf") format("truetype");
+}
